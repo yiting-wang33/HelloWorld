@@ -1,0 +1,29 @@
+public class PerfectNumber
+{
+	// METHOD SIGNATURE BEGINS, THIS METHOD IS REQUIRED
+	public static int perfectNumberCheck(int n)
+	{
+	    int s= 1;
+	    for (int i = 2;i<=Math.sqrt(n);i++) {
+	        if (n%i==0) {
+	        	int b = n/i;
+	        	s=s+i+b;
+     }
+	        
+	    }
+	    if (s==n) return 1;
+	    else return 0;
+		// Check if N is perfect or not 
+		// Return 1 or 0
+		// INSERT YOUR CODE HERE
+	}
+	// METHOD SIGNATURE ENDS
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        PerfectNumber pn = new PerfectNumber();
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        System.out.println(pn.perfectNumberCheck(n));
+        
+	}
+}
